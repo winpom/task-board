@@ -4,20 +4,20 @@
 
 Task Board is a simple Kanban board for task management. It allows users to add, track, and organize tasks across different stages of completion.
 
-![Site](.\assets\images\basesite.png)
+![Site](./assets/images/basesite.png)
 
 ## Features
 
 - **Add Task**: Users can easily add new tasks using the provided form.
 
-![Add Task](.\assets\images\add-task-popup.png)
+![Add Task](./assets/images/add-task-popup.png)
 - **Drag and Drop**: Tasks can be moved between different status lanes (e.g., To Do, In Progress, Done) by dragging and dropping them.
 - **Due Date Highlighting**: Tasks with due dates are visually highlighted based on their status and proximity to the due date.
 
-![Task Highlights](.\assets\images\added-tasks.png)
+![Task Highlights](./assets/images/added-tasks.png)
 - **Task Deletion**: Users can delete tasks they no longer need.
 
-![Task Removed](.\assets\images\deleted.png)
+![Task Removed](./assets/images/deleted.png)
 
 ## Technologies Used
 
