@@ -2,7 +2,7 @@
 let taskList = JSON.parse(localStorage.getItem("tasks"));
 let nextId = JSON.parse(localStorage.getItem("nextId"));
 
-// Todo: create a function to generate a unique task id
+// Function to generate a unique task id
 const generateTaskId = () => {
     if (!nextId === null) {
         nextId = 1;
@@ -13,7 +13,7 @@ const generateTaskId = () => {
     return nextId;
 }
 
-// Todo: create a function to create a task card
+// Function to create a task card
 const createTaskCard = (task) => {
     const taskCard = $("<div>")
         .addClass("card w-75 task-card draggable my-3")
@@ -42,7 +42,7 @@ const createTaskCard = (task) => {
     return taskCard;
 };
 
-// Todo: create a function to render the task list and make cards draggable
+// Function to render the task list and make cards draggable
 const renderTaskList = () => {
     if (!taskList) {
         taskList = [];
@@ -89,7 +89,7 @@ const renderTaskList = () => {
 }
 
 
-// Todo: create a function to handle adding a new task
+// Function to handle adding a new task
 const handleAddTask = (event) => {
     event.preventDefault();
 
@@ -110,7 +110,7 @@ const handleAddTask = (event) => {
     $('#taskDueDate').val("");
 }
 
-// Todo: create a function to handle deleting a task
+// Function to handle deleting a task
 function handleDeleteTask(event) {
     event.preventDefault();
     const taskId = $(this).attr("data-task-id");
@@ -127,7 +127,7 @@ function handleDeleteTask(event) {
     renderTaskList();
 }
 
-// Todo: create a function to handle dropping a task into a new status lane
+// Function to handle dropping a task into a new status lane
 const handleDrop = (event, ui) => {
     const taskId = ui.draggable[0].dataset.taskId;
     const newStatus = event.target.id;
@@ -142,7 +142,7 @@ const handleDrop = (event, ui) => {
     renderTaskList();
 }
 
-// Todo: when the page loads, render the task list, add event listeners, make lanes droppable, and make the due date field a date picker
+// When the page loads, render the task list, add event listeners, make lanes droppable, and make the due date field a date picker
 $(document).ready(() => {
     renderTaskList();
 
